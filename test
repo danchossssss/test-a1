@@ -1,0 +1,36 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+local Window = Library.CreateLib("a1 by danchossssss_i", "RJTheme3")
+local Tab = Window:NewTab("main")
+local Section = Tab:NewSection("movement")
+Section:NewTextBox("speed", "player speed", function(a)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = a
+end)
+Section:NewTextBox("jump", "jump power", function(b)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = b
+end)
+local Section = Tab:NewSection("teleport")
+Section:NewButton("tp", "Ctrl + click tp", function()
+local UIS = game:GetService("UserInputService")
+
+local Player = game.Players.LocalPlayer
+local Mouse = Player:GetMouse()
+
+
+function GetCharacter()
+   return game.Players.LocalPlayer.Character
+end
+
+function Teleport(pos)
+   local Char = GetCharacter()
+   if Char then
+       Char:MoveTo(pos)
+   end
+end
+
+
+UIS.InputBegan:Connect(function(input)
+   if input.UserInputType == Enum.UserInputType.MouseButton1 and UIS:IsKeyDown(Enum.KeyCode.LeftControl) then
+       Teleport(Mouse.Hit.p)
+   end
+end) 
+end)
