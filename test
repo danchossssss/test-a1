@@ -1,6 +1,7 @@
+--обычный--
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("speed hack by danchossssss_i", "RJTheme3")
-local Tab = Window:NewTab("")
+local Window = Library.CreateLib("a1 by danchossssss_i", "RJTheme3")
+local Tab = Window:NewTab("main")
 local Section = Tab:NewSection("movement")
 Section:NewTextBox("speed", "player speed", function(a)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = a
@@ -34,4 +35,8 @@ UIS.InputBegan:Connect(function(input)
    end
 end) 
 end)
-
+local Tab = Window:NewTab("settings")
+local Section = Tab:NewSection("settings")
+Section:NewButton("Dex", "open dex", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
