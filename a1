@@ -1,0 +1,15 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/danchossssss/test-a1/main/ui'))()
+
+local Window = Fluent:CreateWindow({
+    Title = "a1 " .. Fluent.Version,
+    SubTitle = " ",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "axe" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
