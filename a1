@@ -16,3 +16,29 @@ local Tabs = {
 
 local Options = Fluent.Options
 
+
+    Tabs.Main:AddButton({
+        Title = "IY",
+        Description = "",
+        Callback = function()
+            Window:Dialog({
+                Title = "IY",
+                Content = "Execute Infinite Yield",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
