@@ -353,7 +353,7 @@ end
 
 local Window = Fluent:CreateWindow({
 	Title = "Z3XHub 2.3",
-	SubTitle = "by Wer4eryyy",
+	SubTitle = "by Wer4eryyy(restored by danchos)",
 	TabWidth = 160,
 	Size = UDim2.fromOffset(580, 460),
 	Position = UDim2.fromOffset(0, 0),
