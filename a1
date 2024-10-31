@@ -19,11 +19,11 @@ local Options = Fluent.Options
 
     Tabs.Main:AddButton({
         Title = "IY",
-        Description = "",
+        Description = "admin script",
         Callback = function()
             Window:Dialog({
                 Title = "IY",
-                Content = "Execute Infinite Yield",
+                Content = "Execute Infinite Yield?",
                 Buttons = {
                     {
                         Title = "Confirm",
@@ -42,3 +42,28 @@ local Options = Fluent.Options
         end
     })
 
+
+    Tabs.Main:AddButton({
+        Title = "Dex",
+        Description = "Explorer",
+        Callback = function()
+            Window:Dialog({
+                Title = "Dex",
+                Content = "Execute dex?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
