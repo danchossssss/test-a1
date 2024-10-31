@@ -21,7 +21,7 @@ local Options = Fluent.Options
 
     Tabs.Main:AddButton({
         Title = "IY",
-        Description = "Admin script",
+        Description = "admin script",
         Callback = function()
             Window:Dialog({
                 Title = "IY",
