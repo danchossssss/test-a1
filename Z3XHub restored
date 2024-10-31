@@ -352,8 +352,8 @@ function getball()
 end
 
 local Window = Fluent:CreateWindow({
-	Title = "Z3XHub 2.3",
-	SubTitle = "by Wer4eryyy (restored)",
+	Title = "Z3XHub 2.3 (restored)",
+	SubTitle = "by Wer4eryyy",
 	TabWidth = 160,
 	Size = UDim2.fromOffset(580, 460),
 	Position = UDim2.fromOffset(0, 0),
