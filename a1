@@ -1,5 +1,4 @@
-local Fluent = loadstring(game:HttpGet('https://raw.githubusercontent.com/danchossssss/test-a1/main/ui'))()
-local InterfaceManager = loadstring(game:HttpGet("https://github.com/danchossssss/test-a1/blob/main/interface%20manager"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/danchossssss/test-a1/main/ui'))()
 
 local Window = Fluent:CreateWindow({
     Title = "a1 " .. Fluent.Version,
@@ -68,7 +67,3 @@ local Options = Fluent.Options
             })
         end
     })
-
-InterfaceManager:SetLibrary(Fluent)
-InterfaceManager:SetFolder("FluentScriptHub")
-InterfaceManager:BuildInterfaceSection(Tabs.Settings)
