@@ -68,3 +68,7 @@ local Options = Fluent.Options
             })
         end
     })
+
+InterfaceManager:SetLibrary(Fluent)
+InterfaceManager:SetFolder("FluentScriptHub")
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
