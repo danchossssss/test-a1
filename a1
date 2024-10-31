@@ -12,7 +12,8 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "axe" }),
+    Main = Window:AddTab({ Title = "Scripts", Icon = "axe" }),
+    Main = Window:AddTab({ Title = "Player", Icon = "axe" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
