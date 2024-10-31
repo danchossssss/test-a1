@@ -70,19 +70,6 @@ local Options = Fluent.Options
         end
     })
 
-    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
-        Title = "Dropdown",
-        Values = {"default", "two", "three", "100", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
-        Multi = false,
-        Default = 1,
-    })
-
-    Dropdown:SetValue("100")
-
-    Dropdown:OnChanged(function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-    end)
-
 
 InterfaceManager:SetLibrary(Fluent)
 
