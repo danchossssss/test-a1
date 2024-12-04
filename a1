@@ -72,8 +72,8 @@ local Options = Fluent.Options
     })
 
     local Dropdown = Tabs.Player:AddDropdown("Dropdown", {
-        Title = "Dropdown",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Title = "Speed",
+        Values = {"default", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
         Multi = false,
         Default = 1,
     })
