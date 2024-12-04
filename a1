@@ -12,7 +12,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Scripts", Icon = "axe" }),
+    Scripts = Window:AddTab({ Title = "Scripts", Icon = "axe" }),
     Player = Window:AddTab({ Title = "Player", Icon = "axe" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
@@ -20,7 +20,7 @@ local Tabs = {
 local Options = Fluent.Options
 
 
-    Tabs.Main:AddButton({
+    Tabs.Scripts:AddButton({
         Title = "IY",
         Description = "admin script",
         Callback = function()
@@ -46,7 +46,7 @@ local Options = Fluent.Options
     })
 
 
-    Tabs.Main:AddButton({
+    Tabs.Scripts:AddButton({
         Title = "Dex",
         Description = "Explorer",
         Callback = function()
