@@ -78,7 +78,7 @@ local Options = Fluent.Options
         Default = 1,
     })
 
-    Dropdown:SetValue("four")
+    Dropdown:SetValue("default")
 
     Dropdown:OnChanged(function(Value)
         print("Dropdown changed:", Value)
