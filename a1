@@ -80,13 +80,10 @@ local Options = Fluent.Options
 
     Dropdown:SetValue("default")
 
-    Dropdown:OnChanged(function(two)
-        print("ttest")
-    end)
 
-    #Dropdown:OnChanged(function(Value)
-        #print("Dropdown changed:", Value)
-    #end)
+    Dropdown:OnChanged(function(Value)
+        print("Dropdown changed:", Value)
+    end)
 
 
 
