@@ -73,11 +73,7 @@ local Options = Fluent.Options
 
 local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
 
-Toggle:OnChanged(function()
-        if serverhop.Value then
-            while serverhop.Value do
-        print("test")
-end)
+
 
 Options.MyToggle:SetValue(false)
 
