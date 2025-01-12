@@ -104,7 +104,7 @@ Fluent:Notify({
     Content = "The script has been loaded.",
     Duration = 8
 })
-Tabs.Fun:AddButton({
+Tabs.Player:AddButton({
 	Title = "BallFE",
 	Description = "",
 	Callback = function()
