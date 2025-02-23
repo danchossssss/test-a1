@@ -75,19 +75,19 @@ local Options = Fluent.Options
 
 
 
-local Keybind = Tabs.Player:AddKeybind("Keybind", {
-	Title = "Respawn",
-	Mode = "Toggle",
-	Default = "F1",
-	Callback = function()
-		task.wait(0)
-		local pos = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
-		game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-		game.Players.LocalPlayer.Character:Destroy()
-		task.wait(1.7)
-		game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(pos)
-	end
-})
+    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+        Title = "Dropdown",
+        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Multi = false,
+        Default = 1,
+    })
+
+    Dropdown:SetValue("four")
+
+    Dropdown:OnChanged(function(Value)
+        print("Dropdown changed:", Value)
+    end)
+
 
 
 
