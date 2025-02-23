@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "a1 " ,
-    SubTitle = "0.3.0",
+    SubTitle = "dev build 0.3.1",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -22,7 +22,7 @@ local Options = Fluent.Options
 
     Tabs.Scripts:AddButton({
         Title = "IY",
-        Description = "universal",
+        Description = "Universal",
         Callback = function()
             Window:Dialog({
                 Title = "IY",
@@ -48,7 +48,7 @@ local Options = Fluent.Options
 
     Tabs.Scripts:AddButton({
         Title = "Dex",
-        Description = "universal",
+        Description = "Universal",
         Callback = function()
             Window:Dialog({
                 Title = "Dex",
@@ -99,21 +99,29 @@ local Options = Fluent.Options
 
     local Dropdown = Tabs.Player:AddDropdown("Dropdown", {
         Title = "Speed",
-        Values = {"one", "Normal"},
+        Values = {"5", "Normal [16]", "25", "50"},
         Multi = false,
         Default = 1,
     })
 
-    Dropdown:SetValue("Normal")
+    Dropdown:SetValue("Normal [16]")
 
 Dropdown:OnChanged(function(Value)
-    if Value == "one" then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1
+    if Value == "5" then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 5
     end
-    if Value == "Normal" then
+    if Value == "Normal [16]" then
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
+    if Value == "25" then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+    end
+    if Value == "50" then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    end
 end)
+
+
 
 
 
