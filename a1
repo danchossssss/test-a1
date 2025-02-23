@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "a1 " ,
-    SubTitle = "dev build 0.3.1",
+    SubTitle = "dev build 0.3.2",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -99,7 +99,7 @@ local Options = Fluent.Options
 
     local Dropdown = Tabs.Player:AddDropdown("Dropdown", {
         Title = "Speed",
-        Values = {"5", "Normal [16]", "25", "50"},
+        Values = {"5", "Normal [16]", "25", "50", "100"},
         Multi = false,
         Default = 1,
     })
@@ -119,7 +119,60 @@ Dropdown:OnChanged(function(Value)
     if Value == "50" then
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
     end
+    if Value == "100" then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    end
 end)
+
+    local Dropdown = Tabs.Player:AddDropdown("Dropdown", {
+        Title = "Jump",
+        Values = {"25", "Normal [50]", "70", "100", "150", "200", "400"},
+        Multi = false,
+        Default = 1,
+    })
+
+    Dropdown:SetValue("Normal [50]")
+
+Dropdown:OnChanged(function(Jump)
+    if Jump == "25" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 25
+    end
+    if Jump == "Normal [50]" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+    if Jump == "70" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
+    end
+    if Jump == "100" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+    end
+    if Jump == "150" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+    end
+    if Jump == "200" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+    end
+    if Jump == "400" then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 400
+    end
+end)
+
+    Tabs.Player:AddButton({
+        Title = "Teleport",
+        Description = "",
+        Callback = function()
+            mouse = game.Players.LocalPlayer:GetMouse()
+            tool = Instance.new("Tool")
+            tool.RequiresHandle = false
+            tool.Name = "Click Teleport"
+            tool.Activated:connect(function()
+            local pos = mouse.Hit+Vector3.new(0,2.5,0)
+            pos = CFrame.new(pos.X,pos.Y,pos.Z)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+            end)
+            tool.Parent = game.Players.LocalPlayer.Backpack
+        end
+    })
 
 
 
