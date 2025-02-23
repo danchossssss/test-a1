@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "a1 " ,
-    SubTitle = "0.2.2",
+    SubTitle = "0.2.3",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -98,17 +98,20 @@ local Options = Fluent.Options
 
 
     local Dropdown = Tabs.Player:AddDropdown("Dropdown", {
-        Title = "Dropdown",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Title = "Speed",
+        Values = {"one", "Normal"},
         Multi = false,
         Default = 1,
     })
 
-    Dropdown:SetValue("four")
+    Dropdown:SetValue("Normal")
 
 Dropdown:OnChanged(function(Value)
     if Value == "one" then
-        print("Its one")
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1
+    end
+    if Value == "Normal" then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
 end)
 
