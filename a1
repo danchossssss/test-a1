@@ -22,11 +22,11 @@ local Options = Fluent.Options
 
     Tabs.Scripts:AddButton({
         Title = "IY",
-        Description = "admin script",
+        Description = "",
         Callback = function()
             Window:Dialog({
                 Title = "IY",
-                Content = "Execute Infinite Yield?",
+                Content = "Execute script?",
                 Buttons = {
                     {
                         Title = "Confirm",
@@ -48,11 +48,36 @@ local Options = Fluent.Options
 
     Tabs.Scripts:AddButton({
         Title = "Dex",
-        Description = "Explorer",
+        Description = "",
         Callback = function()
             Window:Dialog({
                 Title = "Dex",
-                Content = "Execute dex?",
+                Content = "Execute script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.Scripts:AddButton({
+        Title = "Ro ghoul",
+        Description = "",
+        Callback = function()
+            Window:Dialog({
+                Title = "Ro ghoul",
+                Content = "Execute script?",
                 Buttons = {
                     {
                         Title = "Confirm",
@@ -75,18 +100,6 @@ local Options = Fluent.Options
 
 
 
-    local Dropdown = Tabs.Player:AddDropdown("Dropdown", {
-        Title = "Dropdown",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
-        Multi = false,
-        Default = 1,
-    })
-
-    Dropdown:SetValue("four")
-
-    Dropdown:OnChanged(function(Value)
-        print("Dropdown changed:", Value)
-    end)
 
 
 
