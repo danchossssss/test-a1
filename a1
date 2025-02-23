@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "a1 " ,
-    SubTitle = "dev build 0.3.3",
+    SubTitle = "dev build 0.3.4",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -172,6 +172,28 @@ end)
             end)
             tool.Parent = game.Players.LocalPlayer.Backpack
         end
+    })
+
+    Tabs.Player:AddButton({
+        Title = "Esp",
+        Description = "in dev",
+        Callback = function()
+            local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
+            -- Boxes --
+            Esp.Box = false
+            Esp.BoxColor = Color3.fromRGB(255,255,255)
+            Esp.BoxOutline = true
+            Esp.BoxOutlineColor = Color3.fromRGB(0,0,0)
+            -- HealthBars --
+            Esp.HealthBar = false
+            Esp.HealthBarSide = "Left" -- Left,Bottom,Right
+            -- Names --
+            Esp.Names = true
+            Esp.NamesColor = Color3.fromRGB(255,255,255)
+            Esp.NamesOutline = true
+            Esp.NamesFont = 2
+            Esp.NamesSize = 13
+            end
     })
 
 
