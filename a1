@@ -176,7 +176,7 @@ end)
 
     Tabs.Player:AddButton({
         Title = "Esp",
-        Description = "in dev",
+        Description = "",
         Callback = function()
             local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
             -- Boxes --
