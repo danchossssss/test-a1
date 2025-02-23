@@ -22,7 +22,7 @@ local Options = Fluent.Options
 
     Tabs.Scripts:AddButton({
         Title = "IY",
-        Description = "",
+        Description = "universal",
         Callback = function()
             Window:Dialog({
                 Title = "IY",
@@ -48,7 +48,7 @@ local Options = Fluent.Options
 
     Tabs.Scripts:AddButton({
         Title = "Dex",
-        Description = "",
+        Description = "universal",
         Callback = function()
             Window:Dialog({
                 Title = "Dex",
@@ -72,17 +72,17 @@ local Options = Fluent.Options
     })
 
     Tabs.Scripts:AddButton({
-        Title = "Ro ghoul",
-        Description = "",
+        Title = "Porry's Script",
+        Description = "Ro ghoul",
         Callback = function()
             Window:Dialog({
-                Title = "Ro ghoul",
+                Title = "Porry's Script",
                 Content = "Execute script?",
                 Buttons = {
                     {
                         Title = "Confirm",
                         Callback = function()
-                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/PorryDepTrai/exploit/main/DashBoostSolora.lua"))()
                         end
                     },
                     {
