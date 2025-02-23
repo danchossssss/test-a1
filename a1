@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "a1 " ,
-    SubTitle = "dev build 0.3.4",
+    SubTitle = "dev build 0.3.4 (fixed)",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -195,6 +195,8 @@ end)
             Esp.NamesSize = 13
             end
     })
+
+
 
 
 
